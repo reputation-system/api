@@ -1,4 +1,4 @@
-// Express API made for Beggin
+// Express API made for Reputation System
 const express = require("express");
 const fs = require("fs");
 const mysql = require("mysql2");
