@@ -1,4 +1,4 @@
-// This is the default root (https://api.reputation-system.fr/).
+// This is the default root (https://reputation-api.beggin.fr/).
 // Don't put any other route in this file.
 
 module.exports = {
