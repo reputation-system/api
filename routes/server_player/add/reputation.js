@@ -28,7 +28,8 @@ module.exports = {
                 app.db.query("SELECT * FROM server_players WHERE server_id = ? AND player_steamid64 = ? LIMIT 1", [serverId, steamid64], (err, results) => {
                     if (err) throw err;
 
-                    const reputation = ((results[0] || []).reputation || 100) + parseInt(amount);
+                    let reputation = ((results[0] || []).reputation || 100) + parseFloat(amount);
+                    reputation = Math.max(Math.min(reputation, 0), 100);
 
                     if (results.length === 0) {
 
